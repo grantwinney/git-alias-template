@@ -10,3 +10,4 @@
   psuh = push
   puhs = push
   shove2 = !git add . && git commit -m $1 && git push
+  shove = !git add . && git commit -m \"$1\" && git push && :
