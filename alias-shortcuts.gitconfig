@@ -1,8 +1,13 @@
 [alias]
   co = checkout
+  cob = checkout -b
   ci = commit
+  ec = config --global --edit
   st = status
   br = branch
+  reset = checkout .
+  rclone = clone --recursive
+  rpull = !git pull && git submodule update
   
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
