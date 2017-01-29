@@ -3,10 +3,12 @@
   psuh = push
   puhs = push
   pushh = push
-  plul = pull
-  lpul = pull
+  pll = pull
   pul = pull
   pulll = pull
   commti = commit
   comtmi = commit
+  cmmit = commit
+  comit = commit
+  committ = commit
   
