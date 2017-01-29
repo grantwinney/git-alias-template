@@ -11,7 +11,7 @@ If you'd like to use them, you don't have to copy/paste anything. Instead, clone
     # etc...
 ```
 
-The include section imports settings from other files and merges their functionality without affecting the original config file.
+The `include` section imports settings from other files and merges their functionality without affecting the original config file.
 
 You can read more about Git aliases here:
 
