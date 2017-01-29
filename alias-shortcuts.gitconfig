@@ -7,10 +7,12 @@
   br = branch
   df = diff
   re = checkout .
+  st = stash
+  pop = stash pop
   rclone = clone --recursive
 
   # recursively pull repo and its submodule (if any)
-  rpull = !git pull && git submodule update --recursive
+  rpull = !git pull && git submodule update --init --recursive
 
   # a graph view of a project's history
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
@@ -21,8 +23,8 @@
   acnc = !git add . && git commit --allow-empty-message -m \"\"
 
   # add and commit AND PUSH changes, with and without a message
-  shove = !git add . && git commit -m \"$1\" && git push && :
-  shovenc = !git add . && git commit --allow-empty-message -m \"\" && git push
+  shove = !git add . && git commit -m \"$1\" && git push origin && :
+  shovenc = !git add . && git commit --allow-empty-message -m \"\" && git push origin
 
   # display your currently defined aliases
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
