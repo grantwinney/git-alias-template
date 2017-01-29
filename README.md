@@ -2,24 +2,16 @@ Git's "alias" feature provides a way for you to create shortcuts for other Git c
 
 The `*.gitconfig` files in this repo are a collection of some useful aliases I created, some for long git commands or chains of commands, and others for common typos.
 
-If you'd like to use these aliases, you can clone the repository and reference one or more of the files without doing anything funky to your existing gitconfig file, even leaving your existing aliases in place. Just run the following commands:
-
-```
-cd ~/your/projects
-git clone git@github.com:grantwinney/git-alias-template.git
-
-git config --global include.path "~/your/projects/git-alias-template/alias-shortcuts.gitconfig"
-git config --global include.path "~/your/projects/git-alias-template/alias-typos.gitconfig"
-
-// etc, etc...
-```
-
-That inserts a new section in your gitconfig file (seen below), which imports settings from another file and merges its functionality without affecting the main config file.
+If you'd like to use them, you don't have to copy/paste anything. Instead, clone the repository and reference it from within your existing `.gitconfig` file, which has the added benefit of leaving your existing aliases and other settings untouched. Add the following section to your `.gitconfig` file, where `/your/path` is wherever you cloned the repo to.
 
 ```
 [include]
-    path = ~/your/path/to/projects/git-alias-template/alias.gitconfig
+    path = "/your/path/git-alias-template/alias-shortcuts.gitconfig"
+    path = "/your/path/git-alias-template/alias-typos.gitconfig"
+    # etc...
 ```
+
+The include section imports settings from other files and merges their functionality without affecting the original config file.
 
 You can read more about Git aliases here:
 
