@@ -3,6 +3,7 @@
   ci = commit
   st = status
   br = branch
+  
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
   shove = !git add . && git commit -m \"$1\" && git push && :
