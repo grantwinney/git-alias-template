@@ -7,8 +7,10 @@ If you'd like to use these aliases, you can clone the repository and reference o
 ```
 cd ~/your/projects
 git clone git@github.com:grantwinney/git-alias-template.git
+
 git config --global include.path "~/your/projects/git-alias-template/alias-shortcuts.gitconfig"
 git config --global include.path "~/your/projects/git-alias-template/alias-typos.gitconfig"
+
 // etc, etc...
 ```
 
