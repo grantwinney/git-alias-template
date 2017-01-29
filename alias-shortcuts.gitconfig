@@ -29,4 +29,3 @@
 
   # pass in the name or email address of someone involved with the project
   whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
- 
