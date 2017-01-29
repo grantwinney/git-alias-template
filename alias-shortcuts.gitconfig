@@ -16,11 +16,11 @@
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   hsit = !git hist
 
-  # add and commit changes, with a message or without
+  # add and commit changes, with and without a message
   ac = !git add . && git commit -m \"$1\" && :
   acnc = !git add . && git commit --allow-empty-message -m \"\"
 
-  # add and commit AND PUSH changes, with a message or without
+  # add and commit AND PUSH changes, with and without a message
   shove = !git add . && git commit -m \"$1\" && git push && :
   shovenc = !git add . && git commit --allow-empty-message -m \"\" && git push
 
