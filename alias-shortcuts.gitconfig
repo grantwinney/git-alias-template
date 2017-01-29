@@ -10,17 +10,19 @@
   rclone = clone --recursive
 
   # recursively pull repo and its submodule (if any)
-  rpull = !git pull && git submodule update
+  rpull = !git pull && git submodule update --recursive
 
   # a graph view of a project's history
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   hsit = !git hist
 
-  # add, commit and push changes, with the given message
-  shove = !git add . && git commit -m \"$1\" && git push && :
+  # add and commit changes, with a message or without
+  ac = !git add . && git commit -m \"$1\" && :
+  acnc = !git add . && git commit --allow-empty-message -m \"\"
 
-  # add, commit and push changes, with no message
-  ncshove = !git add . && git commit --allow-empty-message -m \"\" && git push
+  # add and commit AND PUSH changes, with a message or without
+  shove = !git add . && git commit -m \"$1\" && git push && :
+  shovenc = !git add . && git commit --allow-empty-message -m \"\" && git push
 
   # display your currently defined aliases
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
