@@ -10,17 +10,14 @@ git clone git@github.com:grantwinney/git-alias-template.git
 git config --global include.path "~/your/projects/git-alias-template/alias.gitconfig"
 ```
 
-That inserts a new section in your gitconfig file, which pulls in settings from another file and merges its functionality.
+That inserts a new section in your gitconfig file (seen below), which imports settings from another file and merges its functionality without affecting the main config file.
 
 ```
 [include]
     path = ~/your/path/to/projects/git-alias-template/alias.gitconfig
-
-[include]
-    path = ~/your/path/to/projects/git-alias-template/alias.gitconfig
 ```
 
-You can read more about aliases here:
+You can read more about Git aliases here:
 
 * [GitHowTo: Aliases](https://githowto.com/aliases)
 * [Pro Git: 2.7 Git Basics – Git Aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)
